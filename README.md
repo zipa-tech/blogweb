@@ -19,5 +19,15 @@
     # access the service at http://127.0.0.1:<port-number>
 ```
 
+5. Apply Migrations
+```bash
+    $ python.exe manage.py migrate
+```
+
+6. create the superuser to view the admin side
+```bash
+    $ python.exe manage.py createsuperuser
+    # prompted to enter username and password (the password is not viisble for protection)
+```
 5. 
 python.exe .\manage.py startapp blog
