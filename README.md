@@ -1,4 +1,4 @@
-##
+## SOURCE CODE FOR DJANGO WEB COURSE
 1. create a any empty folder to hold your django project <blogweb>
 
 2. install django
