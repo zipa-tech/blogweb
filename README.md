@@ -1,5 +1,17 @@
-## SOURCE CODE FOR DJANGO WEB COURSE
-1. create a any empty folder to hold your django project <blogweb>
+# 🚀 Django Web Course — Source Code & Setup Guide  
+
+Welcome to the **Django Web Development Course**! 🎉  
+This guide walks you through setting up your very first Django project and app, step by step.  
+
+---
+
+## 📂 1. Create a Project Folder  
+First, create an empty folder to hold your Django project:  
+
+```bash
+mkdir blogweb
+cd blogweb
+```
 
 2. install django
 ```bash
