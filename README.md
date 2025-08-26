@@ -29,5 +29,18 @@
     $ python.exe manage.py createsuperuser
     # prompted to enter username and password (the password is not viisble for protection)
 ```
-5. 
-python.exe .\manage.py startapp blog
+
+7. The First Django App
+```bash
+    # step 1. Create The App
+    $ python.exe .\manage.py startapp blog
+
+    # Step 2. Register the app in settings.py INSTALLED_APPS = []
+
+```
+
+8. Models :: make migrations
+```bash
+    $ python.exe .\manage.py makemigrations <app-name>
+    # python.exe .\manage.py makemigrations blog
+```
