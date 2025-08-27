@@ -16,7 +16,5 @@ def home_page(request):
 
     context['siku'] = 'Jumatano'
 
-    print(context)
-
-
+ 
     return render(request, 'home_page.html', context)
