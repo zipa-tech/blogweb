@@ -44,3 +44,4 @@
     $ python.exe .\manage.py makemigrations <app-name>
     # python.exe .\manage.py makemigrations blog
 ```
+

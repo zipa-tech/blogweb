@@ -1,0 +1,7 @@
+<h3>{{ total }} news on {{ siku }}</h3>
+
+{% for post in posts %}
+    <p>{{ post.title }} by {{ post.author }} ({{ post.minutes }} minutes read)</p>
+    <p>{{ post.body }}</p>
+    <p>{{ post.created }}</p>
+{% endfor %}

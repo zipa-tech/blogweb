@@ -5,6 +5,7 @@ from django.utils import timezone
 
 class Post(models.Model):
     """ This saves the blog posts """ # docstrings """ """ # they add extra meaning to the code.
+    
     title = models.CharField(max_length=200, blank=True, null=True)
     author = models.CharField(max_length=200, blank=True, null=True)
     minutes = models.IntegerField(blank=True, null=True)
