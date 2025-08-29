@@ -1,7 +1,57 @@
-<h3>{{ total }} news on {{ siku }}</h3>
+<div style="margin: 20px auto; max-width: 850px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; line-height: 1.6;">
+    
+    <!-- Header -->
+    <h3 style="color: darkslateblue; font-size: 1.8rem; font-weight: bold; margin-bottom: 20px; border-bottom: 2px solid darkslateblue; padding-bottom: 8px;">
+        {{ total }} News on {{ siku }}
+    </h3>
 
-{% for post in posts %}
-    <p>{{ post.title }} by {{ post.author }} ({{ post.minutes }} minutes read)</p>
-    <p>{{ post.body }}</p>
-    <p>{{ post.created }}</p>
-{% endfor %}
+    {% for post in posts %}
+        <div style="background: #ffffff; border: 1px solid #ddd; border-radius: 10px; padding: 20px; margin-bottom: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.2s ease, box-shadow 0.2s ease;">
+            
+            <!-- Post Title -->
+            <h5 style="color: #2b6cb0; font-weight: 700; font-size: 1.2rem; margin: 0 0 10px 0;">
+                {{ post.title }}
+            </h5>
+
+            <!-- Author and Read Time -->
+            <div style="font-size: 0.85rem; color: #555; margin-bottom: 10px;">
+                <span style="font-weight: 500;">By {{ post.author }}</span> · 
+                <span style="color: #888;">{{ post.minutes }} min read</span>
+            </div>
+
+            <!-- Body -->
+            <p style="color: #333; margin-bottom: 12px; font-size: 1rem;">
+                {{ post.body }}
+            </p>
+
+            <!-- Footer (date & actions) -->
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #777;">
+                <small>Published on {{ post.created }}</small>
+                <a href="#" style="color: #2b6cb0; text-decoration: none; font-weight: 600;">Read More →</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<!-- Extra Styling -->
+<style>
+    /* Card hover effect */
+    div[style*="box-shadow"] {
+        cursor: pointer;
+    }
+    div[style*="box-shadow"]:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        div[style*="max-width"] {
+            margin: 10px;
+            padding: 5px;
+        }
+        h3 {
+            font-size: 1.4rem !important;
+        }
+    }
+</style>

@@ -8,7 +8,7 @@ def home_page(request):
     """ This view retrieves all posts to be displayed to users"""
     context = dict()
     
-    posts = Post.objects.all() # task retrieve
+    posts = Post.objects.filter(published = True)# task retrieve
 
     context['total'] = len(posts) # task countr
 
@@ -16,5 +16,4 @@ def home_page(request):
 
     context['siku'] = 'Jumatano'
 
- 
     return render(request, 'home_page.html', context)
